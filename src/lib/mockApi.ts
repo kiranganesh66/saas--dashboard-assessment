@@ -27,6 +27,7 @@ let usersData = [...MOCK_USERS];
 
 const simulateLatency = (ms = 600) => new Promise(res => setTimeout(res, ms));
 
+
 export async function fetchUsers(params: UsersQueryParams): Promise<UsersResponse> {
   await simulateLatency();
 
@@ -55,6 +56,8 @@ export async function fetchUsers(params: UsersQueryParams): Promise<UsersRespons
 
   return { users, total, page: params.page, limit: params.limit, totalPages };
 }
+
+
 
 export async function updateUser(id: string, payload: UpdateUserPayload): Promise<User> {
   await simulateLatency(400);

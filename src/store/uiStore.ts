@@ -50,6 +50,7 @@ export const useUIStore = create<UIState>((set, get) => ({
       page: 1,
     })),
 
+    
   openEditModal: (userId) => set({ editingUserId: userId }),
   closeEditModal: () => set({ editingUserId: null }),
 
